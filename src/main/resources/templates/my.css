@@ -1,0 +1,24 @@
+h2 {
+    color: red;
+}
+
+#username {
+    background: #40bd55;
+}
+
+.container{
+    text-align: center;
+}
+
+.box {
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 10px 5px;
+    padding: 20px;
+}
+
+.cards{
+    justify-content: center;
+    display: flex;
+
+}

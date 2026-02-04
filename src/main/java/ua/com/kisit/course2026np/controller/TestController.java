@@ -11,8 +11,7 @@ public class TestController {
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("hello", "Hello World!!!");
-        return "index";
+        return "categories-admin";
     }
-
 
 }
