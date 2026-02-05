@@ -24,7 +24,6 @@
                 <td>${category.id}</td>
                 <td>
                     <img src="${category.image}" alt="${category.name}" width="50px">
-
                 </td>
                 <td>${category.name}</td>
                 <td>${category.description}</td>
