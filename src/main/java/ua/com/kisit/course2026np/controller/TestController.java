@@ -28,4 +28,19 @@ public class TestController {
         return "category";
     }
 
+    @GetMapping("/user")
+    public String getPageUser() {
+        return "user";
+    }
+
+    @GetMapping("/manager")
+    public String getPageManager() {
+        return "manager";
+    }
+
+    @GetMapping("/admin")
+    public String getPageAdmin() {
+        return "admin";
+    }
+
 }
