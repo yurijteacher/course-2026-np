@@ -15,4 +15,9 @@ public class ClientsService {
         clientRepository.save(client);
     }
 
+    public Clients findById(Long id) {
+        return clientRepository.findById(id).get();
+    }
+
+
 }

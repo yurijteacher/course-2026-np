@@ -47,4 +47,14 @@
 
     <p> Total Value: ${value}</p>
     <p> Sum el from cart: ${el} </p>
+
+    <form action="/deleteAllItemFromCart" method="post">
+        <button type="submit" class="btn btn-primary">Видалити всі дані і повернутись до купівля продукції</button>
+    </form>
+
+
+    <form action="/order" method="get">
+        <button type="submit" class="btn btn-primary">Перейти до оформлення замовлення</button>
+    </form>
+
 </@p.pages>

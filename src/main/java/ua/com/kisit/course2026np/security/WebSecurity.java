@@ -30,10 +30,10 @@ public class WebSecurity {
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
                                 .requestMatchers("/", "/login", "/registration", "/static/**"
-                                        , "/categories", "/category/", "/addItemFromCart", "/cart",
+                                        , "/categories", "/category/**", "/addItemFromCart", "/cart",
                                         "/addItemFromCart", "/updateItemFromCart", "/deleteItemFromCart")
                                 .permitAll()
-                                .requestMatchers("/user").hasAuthority("ROLE_user")
+                                .requestMatchers("/user", "/order","/order/**", "/buy","/buy/**","/thank").hasAuthority("ROLE_user")
                                 .requestMatchers("/manager").hasAuthority("ROLE_manager")
                                 .requestMatchers("/admin").hasAuthority("ROLE_admin")
                                 .anyRequest()

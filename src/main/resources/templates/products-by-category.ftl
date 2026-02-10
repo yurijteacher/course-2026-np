@@ -19,7 +19,7 @@
                         <form action="/addItemFromCart" method="post">
                         <input type="hidden" name="id" value="${product.id}">
 
-                        <input name="quantity" type="number" value="1" min="1" maxlength="1000" step="1">
+                        <input name="quantity" type="number" value="1" min="1" maxlength="1000" step="1" class="form-control">
                         <p><b>Price:</b> ${product.price}</p>
 
                         <button class="btn btn-success" type="submit">Add to cart</button>
