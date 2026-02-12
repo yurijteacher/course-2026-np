@@ -1,6 +1,7 @@
 package ua.com.kisit.course2026np.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import ua.com.kisit.course2026np.entity.Categories;
 import ua.com.kisit.course2026np.entity.Products;
@@ -18,6 +19,7 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+    @Cacheable(cacheNames = "productsByCategory", key="#category.id")
     public List<Products> findByCategory(Categories category) {
         return productRepository.findByCategory(category);
     }

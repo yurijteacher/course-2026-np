@@ -69,8 +69,8 @@ public class UserController {
         Users userById = userService.saveNewUser(user);
 
         userById.setRoles(Collections.singleton(new Roles(1L, "ROLE_user")));
-        client.setUser(userById);
 
+        client.setUser(userById);
         clientService.saveNewClient(client);
 
         return "redirect:/login";

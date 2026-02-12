@@ -86,11 +86,15 @@ public class OrderController {
 
         Cart cart = (Cart) session.getAttribute("cart");
 
-        if(cart == null){
-            return "redirect:/";
-        }
+//        if(cart == null){
+//            return "redirect:/";
+//        }
+//
+//        if(cart.getCart().size()==0){  // .isEmpty()
+//            return "redirect:/";
+//        }
 
-        if(cart.getCart().size()==0){
+        if (cart == null || cart.getCart().isEmpty()) {
             return "redirect:/";
         }
 
