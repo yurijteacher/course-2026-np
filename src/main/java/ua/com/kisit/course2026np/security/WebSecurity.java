@@ -34,7 +34,9 @@ public class WebSecurity {
                                         "/addItemFromCart", "/updateItemFromCart", "/deleteItemFromCart")
                                 .permitAll()
                                 .requestMatchers("/user", "/order","/order/**", "/buy","/buy/**","/thank").hasAuthority("ROLE_user")
-                                .requestMatchers("/manager").hasAuthority("ROLE_manager")
+                                .requestMatchers("/manager","/category-manager","/saveNewCategory", "/updateCategory","/deleteCategory",
+                                        "/product-manager", "/saveNewProduct", "/updateProduct","/deleteProduct"
+                                        ).hasAuthority("ROLE_manager")
                                 .requestMatchers("/admin").hasAuthority("ROLE_admin")
                                 .anyRequest()
                                 .authenticated()
@@ -47,7 +49,8 @@ public class WebSecurity {
                 )
                 .logout(
                         logout -> logout
-                                .permitAll().logoutSuccessUrl("/")
+                                .permitAll()
+                                .logoutSuccessUrl("/")
                 );
 
 

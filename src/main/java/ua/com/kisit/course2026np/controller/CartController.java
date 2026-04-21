@@ -13,7 +13,7 @@ import ua.com.kisit.course2026np.entity.Products;
 @Controller
 public class CartController {
 
-    @GetMapping("/cart")
+    @GetMapping({"/cart","/cart/"})
     public String getCart(HttpServletRequest request, Model model) {
 
         HttpSession session = request.getSession();
