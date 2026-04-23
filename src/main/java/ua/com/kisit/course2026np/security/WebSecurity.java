@@ -31,7 +31,14 @@ public class WebSecurity {
                         authorizeRequests
                                 .requestMatchers("/", "/login", "/registration", "/static/**"
                                         , "/categories", "/category/**", "/addItemFromCart", "/cart",
-                                        "/addItemFromCart", "/updateItemFromCart", "/deleteItemFromCart")
+                                        "/addItemFromCart", "/updateItemFromCart", "/deleteItemFromCart",
+
+                                        // to Manager
+                                        "/category-rest", "/category-rest/*"
+
+
+
+                                )
                                 .permitAll()
                                 .requestMatchers("/user", "/order","/order/**", "/buy","/buy/**","/thank").hasAuthority("ROLE_user")
                                 .requestMatchers("/manager","/category-manager","/saveNewCategory", "/updateCategory","/deleteCategory",

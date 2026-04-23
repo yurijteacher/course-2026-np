@@ -39,6 +39,10 @@ public class CategoriesService {
         categoriesRepository.save(categories);
     }
 
+    public Categories addNewCategory(Categories categories){
+        return categoriesRepository.save(categories);
+    }
+
     @CacheEvict(cacheNames = {"categories","categoryId"}, allEntries = true)
     public void updateCategory(Categories categories) {  // category : id ...
         categoriesRepository.save(categories);
