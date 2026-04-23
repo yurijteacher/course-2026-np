@@ -39,6 +39,10 @@ public class CategoriesService {
         categoriesRepository.save(categories);
     }
 
+    public List<Categories> findAllCategory(){
+        return categoriesRepository.findAll();
+    }
+
     public Categories addNewCategory(Categories categories){
         return categoriesRepository.save(categories);
     }
@@ -50,6 +54,10 @@ public class CategoriesService {
 
     @CacheEvict(cacheNames = {"categories","categoryId"}, allEntries = true)
     public void deleteCategoryById(Long id) {
+        categoriesRepository.deleteById(id);
+    }
+
+    public void deleteCatById(Long id) {
         categoriesRepository.deleteById(id);
     }
 

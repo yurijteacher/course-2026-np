@@ -25,7 +25,7 @@ public class CategoryRestController {
     public ResponseEntity<List<CategoryDto>> getListCategoryDto() {
 
         try {
-            List<Categories> categories = categoryService.findAllCategories();
+            List<Categories> categories = categoryService.findAllCategory();
 
             if (categories == null || categories.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -89,7 +89,7 @@ public class CategoryRestController {
     public ResponseEntity<CategoryDto> deleteCategoryByIdRest(@PathVariable("id") Long id) {
 
         try {
-            categoryService.deleteCategoryById(id);
+            categoryService.deleteCatById(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
